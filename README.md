@@ -20,7 +20,8 @@
 </p>
 
 <p align="center">
-  <b><a href="https://yatovoid.github.io/ossuary/">Documentation</a></b>
+  <b><a href="https://yatovoid.itch.io/ossuary-holyc">Download on itch.io</a></b> (Linux)
+  &middot; <b><a href="https://yatovoid.github.io/ossuary/">Documentation</a></b>
   &middot; <a href="docs/controls.md">Controls</a>
   &middot; <a href="docs/gameplay.md">How the warden hunts</a>
 </p>
@@ -58,4 +59,4 @@ On Windows the game builds and runs inside WSL2, because hcc has no Windows back
 
 ## Status
 
-Builds, passes its tests, and plays start to finish on Linux. macOS and WSL2 builds have not been tried yet. No audio, one level.
+Version 0.1.0 is on [itch.io](https://yatovoid.itch.io/ossuary-holyc) for Linux x86_64. Release steps are in [`release/`](release/). It builds, passes its tests, and plays start to finish on Linux. macOS and WSL2 builds have not been tried yet. No audio, one level.
