@@ -1,0 +1,30 @@
+#include "runtime/platform/sdl_gl.HC"
+#include "runtime/opengl/bindings.HC"
+
+#include "game/core/types.HC"
+#include "game/core/memory.HC"
+#include "runtime/platform/window.HC"
+#include "game/core/math.HC"
+#include "game/core/time.HC"
+
+#include "game/input/input.HC"
+#include "game/systems/input_system.HC"
+
+#include "game/render/shader.HC"
+#include "game/render/texture.HC"
+#include "game/render/mesh.HC"
+#include "game/render/camera.HC"
+#include "game/ui/font.HC"
+#include "game/render/ui_batch.HC"
+
+#include "game/world/level.HC"
+#include "game/world/entity.HC"
+#include "game/world/player.HC"
+#include "game/world/warden.HC"
+#include "game/world/world.HC"
+
+#include "game/render/renderer.HC"
+#include "game/ui/hud.HC"
+#include "game/ui/menu.HC"
+#include "game/systems/state_machine.HC"
+#include "game/systems/game_loop.HC"
