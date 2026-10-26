@@ -83,7 +83,7 @@ The test binary links SDL2 and OpenGL but never initialises them, so it runs on 
 
 ## Render captures
 
-`tests/render_capture.HC` renders a fixed set of scenes through the real renderer and writes each to a PPM image: title, spawn, relic with the lantern doused, warden hunting, gate open, pause, and the loss screen. Use it to review visual changes without playing. It needs a display.
+`tests/render_capture.HC` renders a fixed set of scenes through the real renderer and writes each to a PPM image: title, spawn, relic with the lantern doused, warden hunting, gate open, pause, and the loss screen. Use it to review visual changes without playing. Run it with `SDL_VIDEODRIVER=offscreen` to keep the window off your desktop, or on a machine without a display, as long as the GL driver supports offscreen contexts (NVIDIA and Mesa do).
 
 ```sh
 cd tests
@@ -97,6 +97,21 @@ Convert to PNG with ImageMagick if your viewer doesn't read PPM:
 ```sh
 for f in /tmp/shots/*.ppm; do magick "$f" "${f%.ppm}.png"; done
 ```
+
+## Preview video
+
+`build/scripts/make-preview.sh` records the README preview. It builds `tests/preview_capture.HC`, which runs the real game loop with scripted input through four staged shots (title, taking a relic, the gate opening, the warden in the dark), saves every frame, and encodes them with ffmpeg:
+
+| File | Format | Used by |
+|---|---|---|
+| `docs/media/preview.gif` | 480x270, 12 fps, ~3 MB | the README (GitHub won't play a repo-relative MP4 inline) |
+| `docs/media/preview.mp4` | 960x540, 30 fps, H.264, ~1.5 MB | the docs site, and as a download link |
+
+```sh
+./build/scripts/make-preview.sh
+```
+
+It needs ffmpeg. The capture is deterministic (fixed world seeds, fixed 60 Hz timestep), so rerunning it after a rendering change gives the same shots with the new look. Rerun it whenever the visuals change enough that the README would be out of date.
 
 ## Build these docs
 

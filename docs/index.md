@@ -2,7 +2,9 @@
 
 A first-person horror prototype written in HolyC. You are in a catacomb with a lantern. Five relics are scattered through it, an iron gate is the only way out, and something tall walks the corridors listening for you.
 
-![Title screen](media/title.png)
+<video src="media/preview.mp4" poster="media/title.png" controls muted loop playsinline width="100%"></video>
+
+*Gameplay preview: staged shots captured from the game's own renderer, with scripted input. See [Build and test](build.md#preview-video).*
 
 ## What this project is
 
