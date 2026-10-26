@@ -59,4 +59,4 @@ On Windows the game builds and runs inside WSL2, because hcc has no Windows back
 
 ## Status
 
-Version 0.1.0 is on [itch.io](https://yatovoid.itch.io/ossuary-holyc) for Linux x86_64. Release steps are in [`release/`](release/). It builds, passes its tests, and plays start to finish on Linux. macOS and WSL2 builds have not been tried yet. No audio, one level.
+Version 0.1.0 is on [itch.io](https://yatovoid.itch.io/ossuary-holyc) for Linux x86_64. It builds, passes its tests, and plays start to finish on Linux. macOS and WSL2 builds have not been tried yet. No audio, one level.

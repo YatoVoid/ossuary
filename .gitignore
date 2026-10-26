@@ -2,3 +2,4 @@ build/out/
 *.ppm
 .DS_Store
 build/release/
+release/
